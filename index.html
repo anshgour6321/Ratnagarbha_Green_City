@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Ratnagarbha Green City</title>
+  <script>
+
+    //contact form 
+    
+function sendContactToWhatsApp() {
+
+  var name = document.getElementById("contact-name").value;
+  var phone = document.getElementById("contact-phone").value;
+  var messageBox = document.getElementById("contact-message").value;
+
+  // validation
+  if(name === "" || phone === ""){
+    alert("Please fill Name & Phone Number");
+    return;
+  }
+
+  // message format
+  var message = "Hello, I want to schedule a site visit.%0A%0A"
+              + "Name: " + name + "%0A"
+              + "Phone: " + phone + "%0A"
+
+              + "Message: " + (messageBox ? messageBox : "N/A");
+
+  var whatsappNumber = "917880537962";
+
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+
+
+  //popup form
+ 
+function sendToWhatsApp() {
+
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+
+  // validation
+  if(name === "" || phone === ""){
+    alert("Please fill all details");
+    return;
+  }
+
+  // message format
+  var message = "Hello, I am interested in your project.%0A%0A"
+              + "Name: " + name + "%0A"
+              + "Phone: " + phone;
+
+  // your WhatsApp number
+  var whatsappNumber = "917880537962";
+
+  // redirect
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  // Toggle menu
+  toggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
+  // Auto close on click
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+
+});
+
+window.onload = function() {
+    document.getElementById("popupOverlay").style.display = "flex";
+};
+
+function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+}
+
+</script>
+<!-- fav icon -->
+ <link rel="icon" href="images/icons/green environment.png" type="image/png">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/respons.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      🌲 Ratnagarbha Green City
+    </div>
+
+    <!-- Toggle Button -->
+   <div class="menu-toggle" id="menu-toggle">
+  ☰
+</div>
+
+<ul class="nav-links" id="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#amenities">Amenities</a></li>
+  <li><a href="#location">Location</a></li>
+  <li><a href="#plots">Plots</a></li>
+  <li><a href="#" class="contact-btn">Contact Us</a></li>
+</ul>
+
+  </div>
+</nav>
+  <section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <span class="tag">PREMIUM RESIDENTIAL PLOTS</span>
+
+    <h1>
+      Ratnagarbha <span>Green City</span>
+    </h1>
+
+    <p>"Where you don't just get a plot, you get a future."</p>
+
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary">Discover More</a>
+      <a href="#visit" class="btn btn-light">Book a Site Visit</a>
+    </div>
+
+  </div>
+
+</section>
+    <!-- header section strats -->
+    <header class="header_section">
+      <a href="https://wa.me/917880537962" class="whatsapp-float" target="_blank">
+  <img src="images/whatslogo.png" alt="WhatsApp">
+</a>
+    </header>
+    <!-- end header section -->
+  
+
+  <!-- find section -->
+  <section class="find_section ">
+    <div class="container">
+      <form action="">
+        <div class=" form-row">
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Serach Your Categories ">
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Location ">
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="">
+              search
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- end find section -->
+
+  <!-- Popup Form -->
+<div id="popupOverlay" class="popup-overlay">
+
+<div class="popup-card">
+
+<div class="popup-header">
+
+<h2>Register Your Interest</h2>
+<p>Get price list & brochure instantly</p>
+
+<span class="popup-close" onclick="closePopup()">×</span>
+
+</div>
+
+<div class="popup-form">
+
+<label>Your Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Phone Number</label>
+<input type="text" id="phone" placeholder="Enter your phone number">
+
+<button onclick="sendToWhatsApp()">Submit Enquiry</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- end Popup Form -->
+
+
+  <!-- about section -->
+<section id="about" class="about_section">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="about_heading">
+      <h2>About The Project</h2>
+      <p>"The city address where progress begins today, not tomorrow"</p>
+    </div>
+
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-md-6">
+        <div class="about_text">
+          <p><strong>Ratnagarbha Green City</strong> is a well-thought-out residential plotting project designed with the objective of offering a balanced blend of nature, comfort, and long-term value.</p>
+
+          <p>Situated in a rapidly developing area, this project gives buyers the opportunity to own land whose value continuously appreciates over time—both emotionally and financially.</p>
+
+          <p>Spread across a peaceful, expansive, and green campus, Ratnagarbha Green City is crafted for families seeking a healthy lifestyle, investors who understand growth potential, and individuals aiming to build their dream home amidst open skies, clean air, and natural surroundings.</p>
+
+          <p>The project is developed keeping in mind the vision of a beautiful community featuring wide roads, well-organized plots, a clean environment, and the perfect balance between modern lifestyle and nature.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE CARD -->
+      <div class="col-md-6">
+        <div class="about_card">
+          <img src="images/about-img.jpg" alt="">
+
+          <div class="about_overlay">
+            <h5>Build Your Dream Home</h5>
+            <p>A serene environment waiting for your vision.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- end about section -->
+
+  <!-- sale section -->
+
+  <section id="amenities" class="py-5 bg-light">
+  <div class="container text-center">
+   <h2 class="fw-bold section-title">Project Amenities</h2>
+    <p class="text-muted mb-5">
+      Experience a modern lifestyle perfectly balanced with nature's tranquility.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- BOX 1 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/gate.png">
+          </div>
+          <h5>Gated Society</h5>
+          <p>Secure boundary walls</p>
+        </div>
+      </div>
+
+      <!-- BOX 2 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/security.png">
+          </div>
+          <h5>24x7 Security</h5>
+          <p>Round the clock safety</p>
+        </div>
+      </div>
+
+      <!-- BOX 3 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/green environment.png">
+          </div>
+          <h5>Lush Parks</h5>
+          <p>Green spaces</p>
+        </div>
+      </div>
+
+      <!-- BOX 4 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/road.png">
+          </div>
+          <h5>Wide Roads</h5>
+          <p>25ft, 30ft & 50ft roads</p>
+        </div>
+      </div>
+</div>
+</br>
+<div class="row g-5">
+      <!-- BOX 5 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/drainage.png">
+          </div>
+          <h5>Proper Drainage</h5>
+          <p>Well-planned sewage</p>
+        </div>
+      </div>
+
+      <!-- BOX 6 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/electricity.png">
+          </div>
+          <h5>Electricity</h5>
+          <p>Reliable power supply</p>
+        </div>
+      </div>
+
+      <!-- BOX 7 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/green environment.png">
+          </div>
+          <h5>Green Environment</h5>
+          <p>Eco-friendly living</p>
+        </div>
+      </div>
+
+      <!-- BOX 8 -->
+      <div class="col-md-3">
+        <div class="amenity-card p-4">
+          <div class="icon-box">
+            <img src="images/icons/campus.png">
+          </div>
+          <h5>Clean Campus</h5>
+          <p>Maintained surroundings</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- end sale section -->
+
+  <!-- Strategic Location Advantages -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+
+    <h2 class="fw-bold section-title">Strategic Location Advantages</h2>
+    <p class="text-success mb-5">
+      "A better connected address for a better life."
+    </p>
+
+    <div class="row g-4">
+
+      <!-- COLUMN 1 -->
+      <div class="col-md-4">
+        <div class="location-card">
+
+          <div class="icon-title">
+            <div class="icon blue">
+              🚗
+            </div>
+            <h5>Roads & Expressways</h5>
+          </div>
+
+          <ul>
+            <li>Outer Ring Road <span>02 Mins</span></li>
+            <li>New Jail Road <span>02 Mins</span></li>
+            <li>Lucknow-Raebareli Road <span>08 Mins</span></li>
+            <li>Lucknow-Sultanpur Road <span>10 Mins</span></li>
+            <li>Shaheed Path <span>11 Mins</span></li>
+            <li>Purvanchal Expressway <span>12 Mins</span></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="col-md-4">
+        <div class="location-card">
+
+          <div class="icon-title">
+            <div class="icon purple">
+              ✈️
+            </div>
+            <h5>Travel & Transit</h5>
+          </div>
+
+          <ul>
+            <li>Utrathia Junction <span>12 Mins</span></li>
+            <li>C.C.S. Airport <span>20 Mins</span></li>
+            <li>Charbagh Station <span>22 Mins</span></li>
+          </ul>
+
+          <div class="icon-title mt-4">
+            <div class="icon pink">🛍️</div>
+            <h5>Shopping Malls</h5>
+          </div>
+
+          <ul>
+            <li>Lulu Mall <span>11 Mins</span></li>
+            <li>Platinum Mall <span>11 Mins</span></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="col-md-4">
+        <div class="location-card">
+
+          <div class="icon-title">
+            <div class="icon red">❤️</div>
+            <h5>Hospitals</h5>
+          </div>
+
+          <ul>
+            <li>SGPGI Hospital <span>10 Mins</span></li>
+            <li>Medanta Hospital <span>10 Mins</span></li>
+          </ul>
+
+          <div class="icon-title mt-4">
+            <div class="icon yellow">🎓</div>
+            <h5>Schools</h5>
+          </div>
+
+          <ul>
+            <li>SKD International School <span>08 Mins</span></li>
+            <li>Birla Open Minds School <span>10 Mins</span></li>
+            <li>Lucknow Public School <span>14 Mins</span></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- end Strategic Location Advantages -->
+
+   <!-- MAP -->
+ <section id="location" class="location_section">
+
+  <div class="location_container">
+
+    <div class="location_heading">
+      📍 Location Map
+    </div>
+
+    <div class="location_map_box">
+
+  <img src="images/map.png" alt="Location Map">
+
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- end MAP -->
+
+  <!-- PLot CONFIGURATON -->
+
+<section id="plots" class="plot-section py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold text-white position-relative d-inline-block section-title">
+      Plot Configurations
+    </h2>
+    <p class="text-light fst-italic mb-5">
+      "Where every plot is tailored to your dreams"
+    </p>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="plot-card">
+          <div class="icon-circle">📍</div>
+          <h3>1250 <span>Sq.Ft.</span></h3>
+          <p>Dimensions: 25' x 50'</p>
+          <button class="btn btn-light btn-custom">Enquire Now</button>
+        </div>
+      </div>
+
+      <!-- Card 2 (Highlighted) -->
+      <div class="col-md-4">
+        <div class="plot-card active">
+          <span class="badge-popular">POPULAR</span>
+          <div class="icon-circle">📍</div>
+          <h3>1000 <span>Sq.Ft.</span></h3>
+          <p>Dimensions: 25' x 40'</p>
+          <button class="btn btn-warning btn-custom">Enquire Now</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="plot-card">
+          <div class="icon-circle">📍</div>
+          <h3>700 <span>Sq.Ft.</span></h3>
+          <p>Dimensions: 20' x 35'</p>
+          <button class="btn btn-light btn-custom">Enquire Now</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-light mt-5 small">
+      Future extensions available. The project layout features wide internal roads measuring
+      <strong>25ft,</br> 30ft, and 50ft</strong> for easy vehicle movement and aesthetic planning.
+    </p>
+  </div>
+</section>
+
+ 
+<section class="master_plan_section">
+
+  <div class="container">
+
+    <div class="master_card">
+
+      <!-- Heading -->
+      <h2>📍 Project Master Plan</h2>
+
+      <!-- Image Box -->
+      <div class="plan_image_box">
+
+        <img src="images/about-img.jpg" alt="Master Plan">
+
+        <!-- Overlay Text -->
+        <!-- <div class="plan_overlay">
+          (Replace with Your Actual Plot Layout Map Image)
+        </div> -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!--End PLot CONFIGURATON -->
+
+  <!-- client secction -->
+
+  <section class="client_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container">
+        <h2>
+          What is Says Our Customer
+        </h2>
+      </div>
+      <div class="client_container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/client.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    <span>Majority</span>
+                    <hr>
+                  </h5>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration
+                    in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/client.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    <span>Majority</span>
+                    <hr>
+                  </h5>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration
+                    in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/client.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    <span>Majority</span>
+                    <hr>
+                  </h5>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration
+                    in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+
+
+
+ 
+
+
+  <!-- footer section -->
+  <section id="contact" class="footer">
+
+<div class="fcontainer">
+
+<div>
+<div class="brand-title">🌲 Ratnagarbha <span>Green City</span></div>
+
+<p class="brand-desc">
+Secure your family's future today.<br>
+Book your ideal plot in Lucknow's most promising green residential project.
+</p>
+
+<div class="phone">
+<i>📞</i>
++91 7880537962
+</div>
+
+<div class="phone">
+<i>📞</i>
++91 9839187214
+</div>
+
+</div>
+
+<div class="quick-links">
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+<a href="#">About Project</a>
+<a href="#">Amenities</a>
+<a href="#">Location Details</a>
+<a href="#">Plot Layouts</a>
+
+</div>
+
+<div id="visit" class="contact-box">
+  <h2>💬 Get In Touch</h2>
+
+  <p>Leave your details to schedule a free site visit or get the price list.</p>
+
+  <div class="form-row">
+    <input type="text" id="contact-name" placeholder="Your Name">
+    <input type="text" id="contact-phone" placeholder="Phone Number">
+  </div>
+
+  <textarea id="contact-message" placeholder="Your Message (Optional)"></textarea>
+
+  <button onclick="sendContactToWhatsApp()">✈ Send Message</button>
+</div>
+
+</div>
+
+<div class="footer-divider"></div>
+
+<div class="footer-bottom">
+  <div>
+    © 2026 Ratnagarbha Green City. All rights reserved.
+  </div>
+
+  <div>
+    Developed for your Dream Home.
+  </div>
+</div>
+</section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+
+
+</body>
+
+</html>

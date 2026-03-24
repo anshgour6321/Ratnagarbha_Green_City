@@ -1,0 +1,193 @@
+/* ================= RESPONSIVE CSS ================= */
+@media (max-width: 768px) {
+  .client_section .heading_container h2 {
+    font-size: 24px;
+  }
+}
+
+/* Tablet (992px and below) */
+@media (max-width: 992px) {
+
+  .popup-card {
+    width: 90%;
+  }
+
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .fcontainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .location_container {
+    padding: 30px 20px;
+  }
+
+  .contact-box {
+    max-width: 100%;
+  }
+
+  .plot-card {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+.nav-links {
+  z-index: 9999;
+}
+  /* SHOW MENU */
+  .nav-links.active {
+    display: flex;
+  }
+
+}
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+
+  .row {
+    row-gap: 30px;
+  }
+
+  .popup-card {
+    width: 95%;
+  }
+
+  .popup-form {
+    padding: 20px;
+  }
+
+  .slider_section {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+
+  .slider_section .detail-box p {
+    font-size: 14px;
+  }
+
+  .amenity-card {
+    padding: 20px;
+  }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .plot-card h3 {
+    font-size: 22px;
+  }
+
+  .location_container {
+    padding: 20px 15px;
+  }
+
+  .location_map_box {
+    height: 300px;
+  }
+
+  .fcontainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .popup-header h2 {
+    font-size: 18px;
+  }
+
+  .popup-header p {
+    font-size: 12px;
+  }
+
+  .popup-form input {
+    padding: 10px;
+  }
+
+  .popup-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .slider_section .detail-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .location_heading {
+    font-size: 22px;
+  }
+
+  .location_map_box {
+    height: 250px;
+  }
+
+  .contact-box {
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+}
